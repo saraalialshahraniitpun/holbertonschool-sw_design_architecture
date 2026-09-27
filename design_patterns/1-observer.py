@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 """Module that implements the Observer Design Pattern with topic filtering.
 """
 
@@ -50,7 +50,7 @@ def main():
     email_obs = EmailObserver()
     sms_obs = SmsObserver()
 
-    news.subscribe(email_obs, topics=None)  # Subscribed to all topics
+    news.subscribe(email_obs, topics=None)
     news.subscribe(log_obs, topics={"sports", "breaking"})
     news.subscribe(sms_obs, topics={"breaking"})
 

@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 """Module that implements the Factory Design Pattern with a registry.
 """
 
