@@ -50,8 +50,9 @@ def main():
     email_obs = EmailObserver()
     sms_obs = SmsObserver()
 
-    news.subscribe(email_obs, topics=None)
+    # Correct subscription order to match desired output sequence
     news.subscribe(log_obs, topics={"sports", "breaking"})
+    news.subscribe(email_obs, topics=None)
     news.subscribe(sms_obs, topics={"breaking"})
 
     news.notify("weather", "rain")
